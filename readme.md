@@ -5,7 +5,6 @@ Describe como se dimensionan los elementos en una página web.
 - ## Padding
 
   Define el espaciado exterior alrededor de un elemento. Crea un espacio entre el borde del elemento y los elemenos adyacentes.
-  Cuando aplicamos un margin negativo el elemento se va a desplazar en la direccion opuesta a la que normalmente se desplazaría con un margin positivo.
 
   ```
   .element {
@@ -36,6 +35,16 @@ Describe como se dimensionan los elementos en una página web.
   elemento {
   margin: 15px;
   }
+  ```
+
+  ### Margin Negativo
+
+  Cuando aplicamos un margin negativo el elemento se va a desplazar en la direccion opuesta a la que normalmente se desplazaría con un margin positivo.
+
+  ```
+   elemento {
+    margin-top: -20px; /* Mueve el elemento 20px hacia arriba */
+   }
   ```
 
 - ## Border
