@@ -82,3 +82,124 @@ Se utiliza para que cuando añadimos un padding o border no incrementará el tam
 
 /* Aquí, el ancho total del elemento seguirá siendo 200px, ya que el padding y el borde están incluidos en los 200px definidos. */
 ```
+
+# Posicionamiento
+
+- ## Relative
+
+  El elemento se posiciona en el flujo normal del documento, se puede desplazar respecto a su posición original usando las propiedades top, right, bottom, left.
+
+```
+.relative {
+  position: relative;
+  top: 20px; /* Mueve el elemento 20px hacia abajo */
+  left: 10px; /* Mueve el elemento 10px hacia la derecha */
+}
+```
+
+- ## Absolute
+
+  El elemento se posiciona respecto a su elemento padre mas cercano. Si no tiene un elemento padre asignado, se va a posicionar respecto al contenedor inicial del documento.
+
+  ```
+  .padre {
+  position: relative;
+  }
+
+  .hijo{
+  position: absolute;
+  top: 20px; /* Posiciona el elemento 20px desde el borde superior del elemento padre */
+  left: 10px; /* Posiciona el elemento 10px desde el borde izquierdo de elemento padre */
+  }
+  ```
+
+- ## Fixed
+
+  El elemento se posiciona respecto al contenedor inicial del documento, permanecerá en la misma posición cuando se haga scroll en la página.
+
+  ```
+  .fixed {
+  position: fixed;
+  top: 10px; /* Posiciona el elemento 10px desde el borde superior del viewport */
+  right: 10px; /* Posiciona el elemento 10px desde el borde derecho del viewport */
+  }
+  ```
+
+- ## Sticky
+
+  El elemento se va a comportar como "relative" y se convierte en un elemento "fixed" al alcanzar un umbral durante el scroll.
+
+  ```
+  .sticky {
+  position: sticky;
+  top: 0; /* El elemento se pegará en la parte superior del contenedor padre cuando se haga scroll */
+  }
+  ```
+
+# Propiedades
+
+- ## top
+
+  Define la distancia entre el borde superior del elemento y el borde superior del contenedor de referencia.
+
+  ```
+  .element {
+  top: 20px; /* Mueve el elemento 20px hacia abajo */
+  }
+  ```
+
+- ## right
+
+  Define la distancia entre el borde derecho del elemento y el borde derecho del contenedor de referencia.
+
+  ```
+  .element {
+  right: 20px; /* Mueve el elemento 20px hacia la izquierda */
+  }
+  ```
+
+- ## bottom
+
+  Define la distancia entre el borde derecho del elemento y el borde derecho del contenedor de referencia.
+
+  ```
+  .element {
+  bottom: 20px; /* Mueve el elemento 20px hacia arriba */
+  }
+  ```
+
+- ## left
+
+  Define la distancia entre el borde derecho del elemento y el borde derecho del contenedor de referencia.
+
+  ```
+  .element {
+  left: 20px; /* Mueve el elemento 20px hacia la derecha */
+  }
+  ```
+
+- ## z-index
+  Determina el orden en que los elementos se superponen unos a otros. Un elemento con un z-index mayor se apilará por encima de un elemento con un z-index menor.
+
+```
+  .box1 {
+    background-color: red;
+    top: 50px;
+    left: 50px;
+    z-index: 1; /* Apilará por encima de .box3 */
+  }
+
+  .box2 {
+    background-color: blue;
+    top: 100px;
+    left: 100px;
+    z-index: 2; /* Apilará por encima de .box1 y .box3 */
+  }
+
+  .box3 {
+    background-color: green;
+    top: 150px;
+    left: 150px;
+    z-index: 0; /* Apilará por debajo de .box1 y .box2 */
+  }
+```

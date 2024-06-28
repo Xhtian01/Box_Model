@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.texto {
+  text-align: center;
+  padding: 15px 0;
+}
+
+header {
+  background: #ffcb05;
+  position: sticky;
+  top: 0;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 50px;
+}
+
+.seccion {
+  height: 400px;
+  margin-top: 20px;
+}
